@@ -658,6 +658,23 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.95rem;
 }
 
+/* Image inside each panel card, centered between title and text */
+.panel__media {
+  display: block;
+  margin: 0.6rem auto;
+  width: clamp(120px, 28%, 220px);
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(11,29,58,0.08);
+  border: 1px solid var(--border);
+}
+
+/* keep the per-article CTA spacing consistent */
+.panel__block .panel__wa {
+  margin-top: 1rem;
+}
+
 .panel__wa { margin-top: 1.5rem; }
 
 /* ── About ── */

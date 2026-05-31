@@ -35,12 +35,14 @@
   /* Service panel tabs + dynamic WhatsApp CTA */
   var tabs = document.querySelectorAll(".panel__tab");
   var blocks = document.querySelectorAll(".panel__block");
-  var panelWa = document.getElementById("panelWa");
+  var panelWas = document.querySelectorAll(".panel__wa");
 
   function setPanelWa(serviceName) {
-    if (!panelWa) return;
+    if (!panelWas || !panelWas.length) return;
     var msg = encodeURIComponent("Olá, quero informações sobre " + serviceName);
-    panelWa.href = WA_BASE + msg;
+    panelWas.forEach(function (el) {
+      el.href = WA_BASE + msg;
+    });
   }
 
   tabs.forEach(function (tab) {
