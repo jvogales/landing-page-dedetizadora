@@ -1063,3 +1063,25 @@ a:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 5px; }
 @media (max-width: 600px) { .header__inner { flex-wrap: wrap; padding-top: .7rem; padding-bottom: .7rem; gap: .5rem; } .site-nav { order: 3; width: 100%; justify-content: center; gap: 2rem; } .blog-card { display: flex; } .blog-intro { padding-top: 2.5rem; } .reading h1 { font-size: 2.1rem; } .blog-page .brand__slogan { display: none; } }
 @media (prefers-reduced-motion: reduce) { .blog-page *, .blog-page *::before, .blog-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
 @media (forced-colors: active) { html { scrollbar-color: auto; } }
+
+/* Faixa contínua de marcas; grupos idênticos mantêm a passagem sem saltos. */
+.clients { padding: 2rem 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.clients__heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; margin-bottom: 1rem; }
+.clients__heading h2 { color: var(--muted); font-family: var(--font-display); font-size: .85rem; font-weight: 600; }
+.clients__toggle { border: 1px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--text); font: inherit; font-size: .75rem; padding: .5rem .7rem; min-height: 44px; cursor: pointer; }
+.clients__toggle:hover { background: var(--bg); }
+.clients__toggle:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 3px; }
+.clients__viewport { overflow: hidden; }
+.clients__track { display: flex; width: max-content; animation: clients-drift 32s linear infinite; }
+.clients__group { list-style: none; display: flex; align-items: center; flex-shrink: 0; width: max(1100px, calc(100vw - 4rem)); padding: 0; margin: 0; }
+.clients__item { width: 20%; flex-shrink: 0; padding: 1rem 2rem; display: flex; align-items: center; justify-content: center; }
+.clients__item img { display: block; width: 100%; height: 76px; object-fit: contain; filter: grayscale(1); opacity: .7; }
+.clients__viewport:hover .clients__track, .clients.is-paused .clients__track, .clients:focus-within .clients__track { animation-play-state: paused; }
+@keyframes clients-drift { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .clients__track { animation: none; width: 100%; }
+  .clients__group { width: 100%; flex-wrap: wrap; justify-content: center; }
+  .clients__group[aria-hidden] { display: none; }
+  .clients__item { width: 20%; min-width: 130px; padding: 1rem; }
+  .clients__toggle { display: none; }
+}

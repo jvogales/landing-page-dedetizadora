@@ -4,6 +4,17 @@
   var WA_BASE = "https://wa.me/5500000000000?text=";
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* Marcas: pausa persistente, inclusive em dispositivos sem hover. */
+  var clients = document.querySelector(".clients");
+  var clientsToggle = document.querySelector(".clients__toggle");
+  if (clients && clientsToggle) {
+    clientsToggle.hidden = false;
+    clientsToggle.addEventListener("click", function () {
+      var paused = clients.classList.toggle("is-paused");
+      clientsToggle.textContent = paused ? "Retomar animação" : "Pausar animação";
+    });
+  }
+
   /* Header shadow on scroll */
   var header = document.getElementById("header");
   if (header) {

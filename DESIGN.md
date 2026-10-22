@@ -17,3 +17,7 @@ Páginas HTML estáticas e links nativos, disponíveis sem JavaScript. Navegaç�
 ## Rodapé compartilhado
 
 Todas as páginas usam rodapé azul-marinho com assinatura tipográfica Orlandini, navegação para serviços e blog, região atendida e contato. A faixa inferior separa direitos de uso e retorno ao topo. Reutilizar os mesmos tokens e marcação em todas as páginas estáticas. Não inventar endereço, horário, redes sociais ou registro profissional. Layout em três colunas no desktop, duas no tablet e uma no celular; foco claro sobre o fundo escuro.
+
+## Marcas de clientes
+
+Faixa branca após o hero com logos fornecidas pelo usuário, em tons de cinza, proporções preservadas e movimento contínuo discreto. Ordem: Grupo EPR, CAT Jacarezinho, UENP, Magnus e Ajadavi. Sem descrição de cases. Pausa no hover, foco e botão de pausa persistente; movimento reduzido mostra todas as marcas sem animação. Cópias visuais ficam ocultas de tecnologias assistivas.
