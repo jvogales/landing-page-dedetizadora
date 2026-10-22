@@ -11,7 +11,9 @@
     clientsToggle.hidden = false;
     clientsToggle.addEventListener("click", function () {
       var paused = clients.classList.toggle("is-paused");
-      clientsToggle.textContent = paused ? "Retomar animação" : "Pausar animação";
+      clientsToggle.setAttribute("aria-label", paused ? "Retomar animação das marcas" : "Pausar animação das marcas");
+      clientsToggle.setAttribute("aria-pressed", String(paused));
+      clientsToggle.querySelector("span").textContent = paused ? "▶" : "Ⅱ";
     });
   }
 
