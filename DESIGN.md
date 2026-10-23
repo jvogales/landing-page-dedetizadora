@@ -16,7 +16,7 @@ Páginas HTML estáticas e links nativos, disponíveis sem JavaScript. Navegaç�
 
 ## Rodapé compartilhado
 
-Todas as páginas usam rodapé azul-marinho com logo oficial fornecida pelo usuário (`assets/logo-orlandini.png`), preservada integralmente em bloco de 200 px, navegação para serviços e blog, região atendida e contato. A faixa inferior separa direitos de uso e retorno ao topo. Reutilizar os mesmos tokens e marcação em todas as páginas estáticas. Não inventar endereço, horário, redes sociais ou registro profissional. Layout em três colunas no desktop, duas no tablet e uma no celular; foco claro sobre o fundo escuro.
+Todas as páginas usam rodapé azul-marinho com assinatura tipográfica Orlandini, navegação para serviços e blog, região atendida e contato. A faixa inferior separa direitos de uso e retorno ao topo. Reutilizar os mesmos tokens e marcação em todas as páginas estáticas. Não inventar endereço, horário, redes sociais ou registro profissional. Layout em três colunas no desktop, duas no tablet e uma no celular; foco claro sobre o fundo escuro.
 
 ## Marcas de clientes
 
