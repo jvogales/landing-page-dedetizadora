@@ -4,34 +4,6 @@
   var WA_BASE = "https://wa.me/5500000000000?text=";
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* Não deixar o hover em telas de toque prender a animação. */
-  var clients = document.querySelector(".clients");
-  var clientsToggle = document.querySelector(".clients__toggle");
-  if (clients && clientsToggle) {
-    var motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var paused = motionPreference.matches;
-    function renderClientsControl() {
-      clients.classList.toggle("is-paused", paused);
-      clientsToggle.setAttribute("aria-label", paused ? "Iniciar animação das marcas" : "Pausar animação das marcas");
-      clientsToggle.setAttribute("aria-pressed", String(paused));
-      clientsToggle.innerHTML = paused
-        ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg>'
-        : '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
-    }
-    clientsToggle.hidden = false;
-    renderClientsControl();
-    clientsToggle.addEventListener("click", function () {
-      paused = !paused;
-      clients.classList.toggle("motion-enabled", motionPreference.matches && !paused);
-      renderClientsControl();
-    });
-    motionPreference.addEventListener("change", function () {
-      paused = motionPreference.matches;
-      clients.classList.remove("motion-enabled");
-      renderClientsControl();
-    });
-  }
-
   /* Header shadow on scroll */
   var header = document.getElementById("header");
   if (header) {

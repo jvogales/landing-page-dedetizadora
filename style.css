@@ -1068,30 +1068,14 @@ a:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 5px; }
 
 /* Faixa compacta de clientes entre os serviços e a apresentação da empresa. */
 .clients { padding: 12px 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.clients > .wrap { position: relative; padding-right: 54px; }
 .clients__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.clients__toggle { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 36px; height: 44px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--muted); font: inherit; cursor: pointer; }
-.clients__toggle:hover { background: var(--bg); color: var(--text); }
-.clients__toggle:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 3px; }
 .clients__viewport { overflow: hidden; }
 .clients__track { display: flex; width: max-content; animation: clients-drift 28s linear infinite; }
 .clients__group { list-style: none; display: flex; align-items: center; flex-shrink: 0; width: 900px; padding: 0; margin: 0; }
 .clients__item { width: 180px; height: 64px; flex-shrink: 0; padding: 4px 18px; display: flex; align-items: center; justify-content: center; }
 .clients__item img { display: block; width: 144px; height: 56px; object-fit: contain; }
-.clients.is-paused .clients__track { animation-play-state: paused; }
-@media (hover: hover) and (pointer: fine) { .clients__viewport:hover .clients__track { animation-play-state: paused; } }
 @keyframes clients-drift { to { transform: translateX(-50%); } }
 @media (max-width: 600px) { .clients { padding: 8px 0; } .clients__group { width: 700px; } .clients__item { width: 140px; height: 56px; padding: 4px 12px; } .clients__item img { width: 116px; height: 48px; } }
-@media (prefers-reduced-motion: reduce) {
-  .clients__track { animation: none; width: 100%; }
-  .clients__group { width: 100%; flex-wrap: wrap; justify-content: center; }
-  .clients__group[aria-hidden] { display: none; }
-  .clients > .wrap { padding-right: 20px; }
-  .clients__item { width: 20%; min-width: 110px; }
-  .clients__item img { max-width: 100%; }
-}
-
-
 /* Cabeçalho compacto e navegação por disclosure no celular. */
 .nav-toggle { display: none; }
 @media (max-width: 600px) {
@@ -1129,20 +1113,6 @@ a:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 5px; }
   .footer__bottom a { gap: .3rem; }
   .wa-float { width: 46px; height: 46px; right: 12px; bottom: 12px; }
 }
-/* Movimento reduzido começa parado; a pessoa pode iniciar explicitamente. */
-@media (prefers-reduced-motion: reduce) {
-  .clients.motion-enabled .clients__track { width: max-content; animation: clients-drift 28s linear infinite; }
-  .clients.motion-enabled .clients__group { width: 900px; flex-wrap: nowrap; }
-  .clients.motion-enabled .clients__group[aria-hidden] { display: flex; }
-  .clients.motion-enabled .clients__item { width: 180px; }
-  .clients.motion-enabled > .wrap { padding-right: 54px; }
-  .clients.motion-enabled.is-paused .clients__track { animation-play-state: paused; }
-}
-@media (prefers-reduced-motion: reduce) and (max-width: 600px) {
-  .clients.motion-enabled .clients__group { width: 700px; }
-  .clients.motion-enabled .clients__item { width: 140px; }
-}
-
 /* Blog mobile: lista editorial compacta, conforme referência do usuário. */
 @media (max-width: 600px) {
   .blog-intro { padding-top: 1.5rem; padding-bottom: 1.25rem; }

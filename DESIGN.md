@@ -20,7 +20,7 @@ Todas as páginas usam rodapé azul-marinho com assinatura tipográfica Orlandin
 
 ## Marcas de clientes
 
-Faixa branca compacta entre o painel de serviços e a seção sobre a empresa, com marcas em espaços iguais, proporções preservadas e movimento contínuo discreto. Sem título visível; título acessível e controle compacto de pausa. Não aplicar filtro de cinza. Altura aproximada de 90 px no desktop e 74 px no celular; com movimento reduzido, pode crescer para acomodar todas as marcas. Ordem: Grupo EPR, CAT Jacarezinho, UENP, Magnus e Ajadavi. Sem descrição de cases. Pausa por hover somente com mouse e por botão persistente em qualquer dispositivo. Movimento reduzido inicia estático, com controle para iniciar a animação explicitamente. Cópias visuais ficam ocultas de tecnologias assistivas.
+Faixa branca compacta entre serviços e sobre a empresa. Marcas em espaços iguais e proporções preservadas, sem filtro cinza, sem título visível (há título acessível). Altura aproximada de 90 px no desktop e 74 px no celular. Ordem: Grupo EPR, CAT Jacarezinho, UENP, Magnus e Ajadavi. Sem descrição de cases. Por solicitação explícita do usuário, animação contínua em todas as telas, sem botão e sem pausas por hover, toque ou preferência de movimento reduzido. Cópias visuais ficam ocultas de tecnologias assistivas.
 
 Arquivos de marca: Grupo EPR, CAT Jacarezinho, UENP e Ajadavi em PNG colorido, a partir dos originais enviados; Magnus permanece em SVG por preferência do usuário. Usar `object-fit: contain` para acomodar diferentes proporções sem recorte ou distorção.
 
