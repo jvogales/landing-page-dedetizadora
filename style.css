@@ -1078,7 +1078,8 @@ a:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 5px; }
 .clients__group { list-style: none; display: flex; align-items: center; flex-shrink: 0; width: 900px; padding: 0; margin: 0; }
 .clients__item { width: 180px; height: 64px; flex-shrink: 0; padding: 4px 18px; display: flex; align-items: center; justify-content: center; }
 .clients__item img { display: block; width: 144px; height: 56px; object-fit: contain; }
-.clients__viewport:hover .clients__track, .clients.is-paused .clients__track { animation-play-state: paused; }
+.clients.is-paused .clients__track { animation-play-state: paused; }
+@media (hover: hover) and (pointer: fine) { .clients__viewport:hover .clients__track { animation-play-state: paused; } }
 @keyframes clients-drift { to { transform: translateX(-50%); } }
 @media (max-width: 600px) { .clients { padding: 8px 0; } .clients__group { width: 700px; } .clients__item { width: 140px; height: 56px; padding: 4px 12px; } .clients__item img { width: 116px; height: 48px; } }
 @media (prefers-reduced-motion: reduce) {
@@ -1088,5 +1089,56 @@ a:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 5px; }
   .clients > .wrap { padding-right: 20px; }
   .clients__item { width: 20%; min-width: 110px; }
   .clients__item img { max-width: 100%; }
-  .clients__toggle { display: none; }
+}
+
+
+/* Cabeçalho compacto e navegação por disclosure no celular. */
+.nav-toggle { display: none; }
+@media (max-width: 600px) {
+  .topbar { display: none; }
+  .header__inner { min-height: 68px; padding-top: 0; padding-bottom: 0; gap: .5rem; }
+  .header.has-menu .header__inner { flex-wrap: nowrap; }
+  .header .brand { gap: .5rem; min-width: 0; }
+  .header .brand__logo { width: 40px; height: 40px; }
+  .header .brand__line { font-size: .5rem; letter-spacing: .1em; }
+  .header .brand__name { font-size: 1rem; }
+  .header .brand__slogan { display: none; }
+  .header__inner > .btn--wa { min-height: 40px; padding: 0 .75rem; font-size: .75rem; margin-left: auto; gap: .3rem; }
+  .header__inner > .btn--wa svg { width: 14px; height: 14px; }
+  .header.has-menu .nav-toggle:not([hidden]) { display: inline-flex; align-items: center; justify-content: center; order: 3; flex-shrink: 0; width: 44px; height: 44px; background: var(--surface); color: var(--navy-800); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; }
+  .nav-toggle:focus-visible { outline: 3px solid var(--navy-600); outline-offset: 2px; }
+  .header.has-menu .site-nav { display: none; }
+  .header.has-menu.menu-open .site-nav { display: flex; position: absolute; top: 100%; left: 0; width: 100%; margin: 0; padding: .5rem 1.25rem; background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); gap: 1.5rem; justify-content: flex-start; }
+  .header .site-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .footer { padding-top: 2rem; }
+  .footer__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem 1rem; padding-bottom: 1.5rem; }
+  .footer__identity { grid-column: 1 / -1; }
+  .footer__name { font-size: 1.8rem; }
+  .footer__eyebrow { font-size: .6rem; }
+  .footer__tagline { font-size: .8rem; margin: .5rem 0; }
+  .footer__description { font-size: .8rem; line-height: 1.6; max-width: 45ch; }
+  .footer h2 { font-size: .85rem; margin-bottom: .5rem; }
+  .footer__nav a { font-size: .8rem; min-height: 44px; }
+  .footer__contact > p { font-size: .78rem; line-height: 1.6; }
+  .footer__location { align-items: flex-start; gap: .3rem; }
+  .footer__location svg { width: 16px; height: 20px; }
+  .footer__cta { width: 100%; padding: .55rem; min-height: 44px; font-size: .75rem; gap: .25rem; }
+  .footer__cta svg { flex-shrink: 0; width: 14px; }
+  .footer__bottom { flex-direction: row; align-items: center; gap: .75rem; padding: .75rem 0 4.5rem; font-size: .65rem; }
+  .footer__bottom p { max-width: 30ch; line-height: 1.6; }
+  .footer__bottom a { gap: .3rem; }
+  .wa-float { width: 46px; height: 46px; right: 12px; bottom: 12px; }
+}
+/* Movimento reduzido começa parado; a pessoa pode iniciar explicitamente. */
+@media (prefers-reduced-motion: reduce) {
+  .clients.motion-enabled .clients__track { width: max-content; animation: clients-drift 28s linear infinite; }
+  .clients.motion-enabled .clients__group { width: 900px; flex-wrap: nowrap; }
+  .clients.motion-enabled .clients__group[aria-hidden] { display: flex; }
+  .clients.motion-enabled .clients__item { width: 180px; }
+  .clients.motion-enabled > .wrap { padding-right: 54px; }
+  .clients.motion-enabled.is-paused .clients__track { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) and (max-width: 600px) {
+  .clients.motion-enabled .clients__group { width: 700px; }
+  .clients.motion-enabled .clients__item { width: 140px; }
 }
