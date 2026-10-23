@@ -26,4 +26,4 @@ Arquivos de marca: Grupo EPR, CAT Jacarezinho, UENP e Ajadavi em PNG colorido, a
 
 ## Logo do cabeçalho
 
-Usar a imagem oficial `assets/logo-orlandini.png` no link de marca do cabeçalho em todas as páginas, com proporção quadrada preservada, 88 px no desktop e 72 px no celular. O rodapé mantém a assinatura tipográfica anterior.
+Usar a imagem oficial `assets/logo-orlandini.png` no link de marca do cabeçalho em todas as páginas, com proporção quadrada preservada, 46 × 46 px em todas as telas, ao lado do nome e slogan originais, mantendo o tamanho anterior do cabeçalho. O rodapé mantém a assinatura tipográfica anterior.
